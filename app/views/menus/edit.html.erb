@@ -1,0 +1,15 @@
+<div class="contents row">
+  <div class="container">
+    <h3>編集する</h3>
+    <%= form_with model: @menu, id:"new_post", local: true do |form| %>
+    <div>名前</div>
+      <%= form.text_field :name, placeholder: "Name" %>
+    <div>写真</div>
+    <div id="previews"></div>
+      <%= form.file_field :image %>
+    <div>カロリー</div>
+      <%= form.text_field :calorie, placeholder: "Cal" %>
+      <%= form.submit "SEND" %>
+    <% end %>
+  </div>
+</div>

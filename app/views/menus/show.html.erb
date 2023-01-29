@@ -9,3 +9,10 @@
     <span><%= @menu.calorie %>cal</span>
   </div>
 </div>
+<div>
+  <ul class="more_list">
+    <li>
+      <%= link_to '編集', edit_menu_path(@menu.id), method: :get %>
+    </li>
+  </ul>
+</div>
