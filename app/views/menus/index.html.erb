@@ -1,0 +1,49 @@
+<% @menus.each do |menu| %>
+      <li class='list'>
+        <%= link_to "#" do %>
+        <div class='menu-img-content'>
+          <%= image_tag menu.image.variant(resize: '500x500'), class: "item-img" if menu.image.attached?%>
+        </div>
+        <div class='menu-info'>
+          <h3 class='menu-name'>
+            <%= menu.name %>
+          </h3>
+          <div class='item-price'>
+            <span><%= menu.calorie %>cal</span>
+            <div class='star-btn'>
+              <%= image_tag "star.png", class:"star-icon" %>
+              <span class='star-count'>0</span>
+            </div>
+          </div>
+        </div>
+        <% end %>
+        <% end %>
+      </li>
+
+      <% if @menus.empty? %>
+      <li class='list'>
+        <%= link_to '#' do %>
+        <%= image_tag "https://tech-master.s3.amazonaws.com/uploads/curriculums/images/Rails1-4/sample.jpg", class: "item-img" %>
+        <div class='menu-info'>
+          <h3 class='menu-name'>
+            商品を出品してね！
+          </h3>
+          <div class='item-price'>
+            <span>1000cal</span>
+            <div class='star-btn'>
+              <%= image_tag "star.png", class:"star-icon" %>
+              <span class='star-count'>0</span>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </li>
+      <% end %>
+    </ul>
+
+</div>
+<%#= link_to( new_menu_path , class: 'purchase-btn') do %>
+  <%#span class='purchase-btn-text'>記録する</span>
+  <%#= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+<%# end %>
+<%#= render "shared/footer" %>
