@@ -1,58 +1,14 @@
+.list{
+  list-style:none;
+  text-align: center;
+}
+
 a {
   text-decoration: none;
 }
 
 .main {
   background: #f8f8f8;
-}
-
-/* 画面上部の「人生を変えるフリマアプリ」帯部分 */
-.title-contents {
-  width: 100vw;
-  background-image: image-url('furima-header01.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 5vh 15vw;
-  color: #fff;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
-}
-
-.service-title {
-  font-size: 8vh;
-}
-
-.service-explain {
-  font-size: 2.5vh;
-  line-height: 40px;
-}
-
-.store-btn {
-  display: flex;
-  margin-top: 24px;
-}
-
-.apple-btn {
-  margin-right: 1vw;
-  height: 9vh;
-}
-
-.google-btn {
-  height: 9vh;
-}
-
-/* //画面上部の「人生を変えるフリマアプリ」帯部分 */
-
-.menu-contents {
-  background-color: #FFF;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10vh 0;
 }
 
 .menu-contents>.title {
@@ -85,11 +41,12 @@ a {
 
 .menu-img-content {
   position: relative;
+  background-color: #FFF;
 }
 
 .menu-img {
-  width: 33vh;
-  height: 33vh;
+  width: 50vh;
+  height: 50vh;
 }
 
 .menu-info {

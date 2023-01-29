@@ -1,0 +1,27 @@
+.menu-img-content {
+  position: relative;
+  background-color: #FFF;
+  text-align: center;
+}
+
+.menu-img {
+  width: 50vh;
+  height: 50vh;
+}
+
+.menu-info {
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+  text-align: center;
+}
+
+.menu-name {
+  font-size: 2.5vh;
+}
+
+.menu-calorie {
+  font-size: 1.5vh;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,11 @@
+<div class='menu-img-content'>
+  <%= image_tag @menu.image, class: "menu-img" if @menu.image.attached?%>
+</div>
+<div class='menu-info'>
+  <h3 class='menu-name'>
+  <%= @menu.name %>
+  </h3>
+  <div class='item-price'>
+    <span><%= @menu.calorie %>cal</span>
+  </div>
+</div>

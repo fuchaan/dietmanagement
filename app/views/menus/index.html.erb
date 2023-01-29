@@ -1,8 +1,9 @@
 <% @menus.each do |menu| %>
+    <div></div>
       <li class='list'>
-        <%= link_to "#" do %>
+        <%= link_to menu_path(menu.id) do %>
         <div class='menu-img-content'>
-          <%= image_tag menu.image.variant(resize: '500x500'), class: "item-img" if menu.image.attached?%>
+          <%= image_tag menu.image, class: "menu-img" if menu.image.attached?%>
         </div>
         <div class='menu-info'>
           <h3 class='menu-name'>
@@ -17,7 +18,7 @@
           </div>
         </div>
         <% end %>
-        <% end %>
+<% end %>
       </li>
 
       <% if @menus.empty? %>
