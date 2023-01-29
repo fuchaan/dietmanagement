@@ -761,6 +761,10 @@ header.header div.header__bar.row h1.grid-6 a {
   display: block;
 }
 
+.nav{
+  display: flex;
+}
+
 header.header div.header__bar.row div.grid-6 {
   float: right;
   text-align: right;

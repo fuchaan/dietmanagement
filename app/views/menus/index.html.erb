@@ -1,7 +1,9 @@
 <% @menus.each do |menu| %>
-    <div></div>
       <li class='list'>
-        <%= link_to menu_path(menu.id) do %>
+        <div>
+          <%= menu.user.name %>さんの投稿です
+        </div>
+        <%= link_to user_path(menu.user_id) do %>
         <div class='menu-img-content'>
           <%= image_tag menu.image, class: "menu-img" if menu.image.attached?%>
         </div>
@@ -20,14 +22,13 @@
         <% end %>
 <% end %>
       </li>
-
       <% if @menus.empty? %>
       <li class='list'>
         <%= link_to '#' do %>
-        <%= image_tag "https://tech-master.s3.amazonaws.com/uploads/curriculums/images/Rails1-4/sample.jpg", class: "item-img" %>
+        <%= image_tag "sample.png", class: "menu-img" %>
         <div class='menu-info'>
           <h3 class='menu-name'>
-            商品を出品してね！
+            sample
           </h3>
           <div class='item-price'>
             <span>1000cal</span>
@@ -41,10 +42,4 @@
       </li>
       <% end %>
     </ul>
-
 </div>
-<%#= link_to( new_menu_path , class: 'purchase-btn') do %>
-  <%#span class='purchase-btn-text'>記録する</span>
-  <%#= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
-<%# end %>
-<%#= render "shared/footer" %>

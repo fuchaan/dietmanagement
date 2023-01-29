@@ -13,15 +13,29 @@
     <header class="header">
       <div class="header__bar row">
         <h1 class="grid-6"><a href="/">食事管理アプリ</a></h1>
+        <div class="nav">
+        <% if user_signed_in? %>
         <div class="user_nav grid-6">
-          <a class="post" href="/menus/new">投稿する</a>
+        <%= link_to 'logout', destroy_user_session_path, method: :delete, class: "post" %>
+        </div>
+        <% else%>
+          <div class="user_nav grid-6">
+            <a class="post" href="/users/sign_up">新規登録</a>
+          </div>
+          <div class="user_nav grid-6">
+            <a class="post" href="/users/sign_in">login</a>
+          </div>
+        <% end %>
+          <div class="user_nav grid-6">
+            <a class="post" href="/menus/new">投稿する</a>
+          </div>
         </div>
       </div>
     </header>
     <%= yield %>
     <footer>
       <p>
-        Copyright PicTweet 2019.
+        Copyright Dietmanagement 2023.
       </p>
     </footer>
   </body>
