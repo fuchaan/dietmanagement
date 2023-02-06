@@ -5,15 +5,15 @@
 普段の食事を管理することで健康管理やダイエットの記録を残すことができる
 
 # URL
-未
+https://shi-shi-guan-li.onrender.com/
 
 テスト用アカウント
-未
-
+mail :test@test.com
+pass :test123
 # 利用方法
-トップページよりユーザーの新規登録を行う
+トップページよりユーザーの新規登録またはログインを行う
 トップページから投稿処理にとび飲食の内容の投稿を行う  
-個人ページに飛ぶと自分の投稿した内容を確認することができる
+トップページに投稿した内容が反映され確認できる
 
 # アプリケーションを作成した背景
 大学生時代に運動をする機会が減ってしまったことから体重が増加しました。  
@@ -25,12 +25,9 @@
 # 洗い出した要件
 https://docs.google.com/spreadsheets/d/1qkZlisjdkwRV9kmBecPRDPrKyI6qpN9qHFD18RYh8-0/edit#gid=0
 
-# 実装した機能についての画像やGIFおよびその説明
-後日
-
 # 実装予定の機能
-いいね機能
-
+ユーザーページの実装(個人の投稿一覧)
+いいね機能の実装
 # データベース設計
 [![Image from Gyazo](https://i.gyazo.com/22117207d4eb2bb641af6ce078543ffb.png)](https://gyazo.com/22117207d4eb2bb641af6ce078543ffb)
 
