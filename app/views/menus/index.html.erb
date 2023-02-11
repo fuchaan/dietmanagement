@@ -1,25 +1,25 @@
 <% @menus.each do |menu| %>
-      <li class='list'>
-        <div>
-          <%= menu.user.name %>さんの投稿です
+  <li class='list'>
+    <%= link_to user_path(menu.user_id) do %>
+    <div>
+      <%= link_to menu.user.name, user_path(menu.user_id) %>さんの投稿です
+    </div>
+    <div class='menu-img-content'>
+      <%= image_tag menu.image, class: "menu-img" if menu.image.attached?%>
+    </div>
+    <div class='menu-info'>
+      <h3 class='menu-name'>
+        <%= menu.name %>
+      </h3>
+      <div class='item-price'>
+        <span><%= menu.calorie %>cal</span>
+        <div class='star-btn'>
+          <%= image_tag "star.png", class:"star-icon" %>
+          <span class='star-count'>0</span>
         </div>
-        <%= link_to user_path(menu.user_id) do %>
-        <div class='menu-img-content'>
-          <%= image_tag menu.image, class: "menu-img" if menu.image.attached?%>
-        </div>
-        <div class='menu-info'>
-          <h3 class='menu-name'>
-            <%= menu.name %>
-          </h3>
-          <div class='item-price'>
-            <span><%= menu.calorie %>cal</span>
-            <div class='star-btn'>
-              <%= image_tag "star.png", class:"star-icon" %>
-              <span class='star-count'>0</span>
-            </div>
-          </div>
-        </div>
-        <% end %>
+      </div>
+    </div>
+  <% end %>
 <% end %>
       </li>
       <% if @menus.empty? %>
