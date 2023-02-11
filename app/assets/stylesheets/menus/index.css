@@ -80,3 +80,11 @@ a {
 .star-count {
   font-size: 2vh;
 }
+
+.post-user{
+  text-align: center;
+}
+
+.post-user-name{
+  font-size: 2.5vh;  
+}

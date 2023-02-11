@@ -1,11 +1,11 @@
 <% @menus.each do |menu| %>
+  <div class='post-user'>
+    <%= link_to menu.user.name, user_path(menu.user_id), class: 'post-user-name' %>さんの投稿です
+  </div>
   <li class='list'>
     <%= link_to user_path(menu.user_id) do %>
-    <div>
-      <%= link_to menu.user.name, user_path(menu.user_id) %>さんの投稿です
-    </div>
     <div class='menu-img-content'>
-      <%= image_tag menu.image, class: "menu-img" if menu.image.attached?%>
+      <%= image_tag menu.image, class: 'menu-img' if menu.image.attached?%>
     </div>
     <div class='menu-info'>
       <h3 class='menu-name'>
@@ -14,32 +14,31 @@
       <div class='item-price'>
         <span><%= menu.calorie %>cal</span>
         <div class='star-btn'>
-          <%= image_tag "star.png", class:"star-icon" %>
+          <%= image_tag 'star.png', class:'star-icon' %>
           <span class='star-count'>0</span>
         </div>
       </div>
     </div>
-  <% end %>
+    <% end %>
+  </li>
 <% end %>
-      </li>
-      <% if @menus.empty? %>
-      <li class='list'>
-        <%= link_to '#' do %>
-        <%= image_tag "sample.png", class: "menu-img" %>
-        <div class='menu-info'>
-          <h3 class='menu-name'>
-            カレーライス(sample)
-          </h3>
-          <div class='item-price'>
-            <span>650cal</span>
-            <div class='star-btn'>
-              <%= image_tag "star.png", class:"star-icon" %>
-              <span class='star-count'>0</span>
-            </div>
-          </div>
+<% if @menus.empty? %>
+  <li class='list'>
+    <%= link_to '#' do %>
+    <%= image_tag 'sample.png', class: 'menu-img' %>
+    <div class='menu-info'>
+      <h3 class='menu-name'>
+        カレーライス(sample)
+      </h3>
+      <div class='item-price'>
+        <span>650cal</span>
+        <div class='star-btn'>
+          <%= image_tag 'star.png', class:'star-icon' %>
+          <span class='star-count'>0</span>
         </div>
-        <% end %>
-      </li>
-      <% end %>
-    </ul>
-</div>
+      </div>
+    </div>
+    <% end %>
+  </li>
+<% end %>
+</ul>
