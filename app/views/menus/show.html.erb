@@ -1,0 +1,31 @@
+<div class='user-name'>
+  <%= @user.name %>さんの投稿です
+</div>
+  <li class='list'>
+      <div class='menu-img-content'>
+        <%= image_tag @menu.image, class: 'menu-img' if @menu.image.attached?%>
+      </div>
+    <% if current_user.id == @menu.user.id %>
+      <div class='edit-destroy'>
+        <div class='menu-edit'>
+          <%= link_to edit_menu_path(@menu.id)do %>
+            <button >編集</button>
+          <%end%>
+        </div>
+      <div class='menu-destroy'>
+        <%= link_to menu_path(@menu.id), method: :delete do %>
+          <button >削除</button>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+      <div class='menu-info'>
+        <h3 class='menu-name'>
+          <%= @menu.name %>
+        </h3>
+        <div class='menu-price'>
+          <span><%= @menu.calorie %>cal</span>
+        </div>
+      </div>
+      <div>
+</div>

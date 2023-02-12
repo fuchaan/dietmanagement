@@ -3,7 +3,7 @@
     <%= link_to menu.user.name, user_path(menu.user_id), class: 'post-user-name' %>さんの投稿です
   </div>
   <li class='list'>
-    <%= link_to user_path(menu.user_id) do %>
+    <%= link_to menu_path(menu.id) do %>
     <div class='menu-img-content'>
       <%= image_tag menu.image, class: 'menu-img' if menu.image.attached?%>
     </div>

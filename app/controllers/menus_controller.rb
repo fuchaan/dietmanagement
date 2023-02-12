@@ -13,6 +13,11 @@ class MenusController < ApplicationController
     Menu.create(menu_params)
   end
 
+  def show
+    @menu = Menu.find(params[:id])
+    @user = User.find(@menu.user_id)
+  end
+
   def destroy
     menu = Menu.find(params[:id])
     menu.destroy
