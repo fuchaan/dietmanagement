@@ -2,14 +2,23 @@
   <div class='container'>
     <h3>投稿する</h3>
     <%= form_with model: @menu, id:'new_post', local: true do |form| %>
-    <div>名前</div>
-      <%= form.text_field :name, placeholder: 'Name' %>
-    <div>写真</div>
-    <div id='previews'></div>
+    <div>
+      <div>食べ物</div>
+      <%= form.text_field :main_name, placeholder: 'Name' %>
+      <div>写真</div>
+      <div id='previews'></div>
       <%= form.file_field :image %>
-    <div>カロリー</div>
-      <%= form.text_field :calorie, placeholder: 'Cal' %>
-      <%= form.submit 'SEND' %>
+      <div>カロリー</div>
+      <%= form.text_field :main_calorie, id: "main_cal", placeholder: 'Cal' %>
+    </div>
+    <div>飲み物
+      <%= form.text_field :drink_name, placeholder: 'Drink' %>
+      <%= form.text_field :drink_calorie,id: "drink_cal", placeholder: 'DrinkCal' %>
+    </div>
+    <div>トータルカロリー
+    <span id='total_cal'></span>cal
+    </div>
+    <%= form.submit 'SEND' %>
     <% end %>
   </div>
 </div>
